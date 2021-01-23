@@ -18,6 +18,8 @@ else:
         mylist.append(birthYear)
         choice = raw_input("Do you have a pet?" + "[Yes/No]")
         userchoice = choice.lower()
+        if userchoice.isspace() or userchoice == "":
+            sys.exit("Please enter proper choice. Spaces are not allowed")
         if userchoice in yes:
             petName = raw_input("Enter the pet name: ")
             if re.match("^[a-z]+$", petName):
@@ -27,6 +29,8 @@ else:
         else:
             choice1 = raw_input("Do you have a car?" + "[Enter car brand name if Yes]" + "[Yes/No]")
             userchoice1 = choice1.lower()
+            if userchoice1.isspace() or userchoice1 == "":
+                sys.exit("Please enter proper choice. Spaces are not allowed")
             if userchoice1 in yes:
                 brandName = raw_input("Enter the brand name: ")
                 if re.match("^[a-z]+$", brandName):
