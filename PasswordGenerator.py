@@ -7,7 +7,7 @@ no = set(['no', 'n'])
 mylist = []
 
 userName = raw_input("Enter the username: ").strip()
-if not re.match("^[a-z]+$", userName):
+if not re.match("^[A-za-z]+$", userName):
     sys.exit("Error! Only alphabets are allowed!")
 else:
     mylist.append(userName)
@@ -22,7 +22,7 @@ else:
             sys.exit("Please enter proper choice.")
         if userchoice in yes:
             petName = raw_input("Enter the pet name: ").strip()
-            if re.match("^[a-z]+$", petName):
+            if re.match("^[A-za-z]+$", petName):
                 mylist.append(petName)
             else:
                 sys.exit("Error! Only alphabets are allowed!")
@@ -33,13 +33,13 @@ else:
                 sys.exit("Please enter proper choice.")
             if userchoice1 in yes:
                 brandName = raw_input("Enter the brand name: ").strip()
-                if re.match("^[a-z]+$", brandName):
+                if re.match("^[A-za-z]+$", brandName):
                     mylist.append(brandName)
                 else:
                     sys.exit("Error! Only alphabets are allowed!")
             else:
                 cityName = raw_input("Enter your city name: ").strip()
-                if re.match("^[a-z]+$", cityName):
+                if re.match("^[A-za-z]+$", cityName):
                     mylist.append(cityName)
                 else:
                     sys.exit("Error! Only alphabets are allowed!")
